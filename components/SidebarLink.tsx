@@ -15,6 +15,7 @@ const SidebarLink = ({ link }) => {
   }
 
   const Icon = icons[link.icon];
+
   return (
     <Link href={link.link} className="w-full flex justify-center items-center">
       <Icon
