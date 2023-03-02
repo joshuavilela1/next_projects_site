@@ -13,6 +13,7 @@
     "seed": "ts-node -P tsconfig-seed.json -r tsconfig-paths/register --transpileOnly prisma/seed.ts"
   },
   "dependencies": {
+    "@next/font": "^13.2.3",
     "@prisma/client": "^4.10.1",
     "@types/node": "18.14.1",
     "@types/react": "18.0.28",
@@ -26,6 +27,7 @@
     "eslint-config-next": "13.2.0",
     "jose": "4.11.1",
     "next": "13.2.0",
+    "next-google-fonts": "^2.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-feather": "2.0.10",

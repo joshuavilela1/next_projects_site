@@ -1,5 +1,3 @@
-import { UserMinus } from 'react-feather';
-
 const fetcher = async ({ url, method, body, json = true }) => {
   const res = await fetch(url, {
     method,
