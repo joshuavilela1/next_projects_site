@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import Card from './Card';
+import Image from 'next/image';
 import logo from '@/assets/images/logo.png';
 import SidebarLink from './SidebarLink';
 
@@ -24,9 +24,9 @@ const Sidebar = () => {
       <div className="w-full flex justify-center items-center">
         <Image src={logo} alt="Able logo" priority className="w-14" />
       </div>
-      {links.map((link) => {
-        <SidebarLink link={link} />;
-      })}
+      {links.map((link) => (
+        <SidebarLink link={link} />
+      ))}
     </Card>
   );
 };
