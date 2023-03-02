@@ -2,7 +2,6 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { db } from '@/lib/db';
 import { comparePasswords, createJWT } from '@/lib/auth';
 import { serialize } from 'cookie';
-import { requestToBodyStream } from 'next/dist/server/body-streams';
 
 export default async function signin(
   req: NextApiRequest,
