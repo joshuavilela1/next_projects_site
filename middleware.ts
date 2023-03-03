@@ -12,10 +12,8 @@ const verifyJWT = async (jwt) => {
   return payload;
 };
 
-// allows access to pages if authorized user through sign in, if not redirect to signin
 export default async function middleware(req, res) {
   const { pathname } = req.nextUrl;
-
   if (
     pathname.startsWith('/_next') ||
     pathname.startsWith('/api') ||

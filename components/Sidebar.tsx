@@ -24,8 +24,8 @@ const Sidebar = () => {
       <div className="w-full flex justify-center items-center">
         <Image src={logo} alt="Able logo" priority className="w-14" />
       </div>
-      {links.map((link) => (
-        <SidebarLink link={link} />
+      {links.map((link, i) => (
+        <SidebarLink key={i} link={link} />
       ))}
     </Card>
   );
