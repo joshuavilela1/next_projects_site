@@ -34,14 +34,15 @@ export default async function Page() {
             <Greetings />
           </Suspense>
         </div>
-        <div className="flex flex-2 grow items-center flex-wrap mt-3 -m-3 ">
-          {projects.map((project) => {
+        <div className="flex flex-2 grow items-center flex-wrap mt-3 -m-3 p-5">
+          {projects.map((project) => (
+            //!Remember Implicit vs Explicit Returns
             <div className="w-1/3 p-3" key={project.id}>
               <Link href={`/project/${project.id}`}>
                 <ProjectCard project={project} />
               </Link>
-            </div>;
-          })}
+            </div>
+          ))}
           <div className="w-1/3 p-3">{/* new project here */}</div>
         </div>
         <div className="mt-6 flex-2 grow w-full flex">
