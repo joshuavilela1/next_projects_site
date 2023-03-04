@@ -61,7 +61,7 @@ model Task {
 
   status      TASK_STATUS @default(NOT_STARTED)
   name        String
-  description String?
+  description String
 
   due     DateTime?
   deleted Boolean   @default(false)

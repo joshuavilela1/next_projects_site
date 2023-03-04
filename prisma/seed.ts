@@ -8,7 +8,6 @@ const getRandomTaskStatus = () => {
     TASK_STATUS.NOT_STARTED,
     TASK_STATUS.STARTED,
   ];
-
   return statuses[Math.floor(Math.random() * statuses.length)];
 };
 
@@ -51,7 +50,6 @@ async function main() {
 
   console.log({ user, tasks });
 }
-
 main()
   .then(async () => {
     await db.$disconnect();

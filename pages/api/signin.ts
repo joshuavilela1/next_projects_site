@@ -20,7 +20,7 @@ export default async function signin(
       return;
     }
 
-    const isUser = await comparePasswords(req.body.password, user.password);
+    const isUser = await comparePasswords(req.body.password, user?.password);
 
     if (isUser) {
       const jwt = await createJWT(user);
