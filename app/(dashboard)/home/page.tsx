@@ -7,6 +7,7 @@ import { Suspense } from 'react';
 import Greetings from '@/components/Greetings';
 import GreetingsSkeleton from '@/components/GreetingsSkeleton';
 import ProjectCard from '@/components/ProjectCard';
+import TaskCard from '@/components/TaskCard';
 
 const getData = async () => {
   await delay(2000);
@@ -36,7 +37,7 @@ export default async function Page() {
         </div>
         <div className="flex flex-2 grow items-center flex-wrap mt-3 -m-3 p-5">
           {projects.map((project) => (
-            //!Remember Implicit vs Explicit Returns
+            //! Remember Implicit vs Explicit Returns
             <div className="w-1/3 p-3" key={project.id}>
               <Link href={`/project/${project.id}`}>
                 <ProjectCard project={project} />
@@ -45,8 +46,10 @@ export default async function Page() {
           ))}
           <div className="w-1/3 p-3">{/* new project here */}</div>
         </div>
-        <div className="mt-6 flex-2 grow w-full flex">
-          <div className="w-full">{/* tasks here */}</div>
+        <div className="mt-6 w-full flex px-5">
+          <div className="w-full">
+            <TaskCard />
+          </div>
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ import Card from './Card';
 import { delay } from '@/lib/async';
 
 const getData = async () => {
-  await delay(5000);
+  await delay(2000);
   const user = await getUserFromCookie(cookies());
   return user;
 };
@@ -14,7 +14,7 @@ const Greetings = async () => {
   const user = await getData();
 
   return (
-    <Card className="w-full py-4 relative">
+    <Card className="w-full py-2 m-5 relative">
       <div className="mb-4">
         <h1 className="text-3xl text-gray-700 font-bold mb-4">
           Hello, {user?.firstName}!
