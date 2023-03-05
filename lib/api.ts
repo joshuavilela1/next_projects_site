@@ -36,7 +36,7 @@ export const signin = async (user) => {
   });
 };
 
-export const createNewProject = (name) => {
+export const createNewProject = async (name) => {
   return fetcher({
     url: '/api/project',
     method: 'POST',
