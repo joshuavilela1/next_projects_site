@@ -2,7 +2,6 @@
 import { createNewProject } from '@/lib/api';
 import { useState } from 'react';
 import Modal from 'react-modal';
-import { createNew } from 'typescript';
 import Button from './Button';
 import Input from './Input';
 
@@ -10,9 +9,9 @@ Modal.setAppElement('#modal');
 
 const NewProject = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
-  const [name, setName] = useState('');
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
+  const [name, setName] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,7 +32,7 @@ const NewProject = () => {
         <h1 className="text-3xl mb-6">New Project</h1>
         <form className="flex items-center" onSubmit={handleSubmit}>
           <Input
-            placeholder="Project Name"
+            placeholder="project name"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
