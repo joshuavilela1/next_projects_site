@@ -24,7 +24,7 @@ const Greetings = async () => {
         </h4>
       </div>
       <div>
-        <Button size="large">Today's Schedule</Button>
+        <Button size="large">Today&apos;s Schedule</Button>
       </div>
     </Card>
   );
