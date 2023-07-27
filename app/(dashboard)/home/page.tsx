@@ -29,14 +29,14 @@ export default async function Page() {
   const { projects } = await getData();
 
   return (
-    <div className="h-full overflow-y-auto pr-6 w-full">
-      <div className=" h-full  items-stretch justify-center min-h-[content]">
-        <div className="flex-1 grow flex">
+    <div className="w-full h-full pr-6 overflow-y-auto">
+      <div className=" h-full items-stretch justify-center min-h-[content]">
+        <div className="flex flex-1 grow">
           <Suspense fallback={<GreetingsSkeleton />}>
             <Greetings />
           </Suspense>
         </div>
-        <div className="flex flex-2 grow items-center flex-wrap mt-3 -m-3 p-5">
+        <div className="flex flex-wrap items-center p-5 mt-3 -m-3 flex-2 grow">
           {projects.map((project) => (
             //! Remember Implicit vs Explicit Returns
             <div className="w-1/3 p-3" key={project.id}>
@@ -49,7 +49,7 @@ export default async function Page() {
             <NewProject />
           </div>
         </div>
-        <div className="mt-6 w-full flex px-5">
+        <div className="flex w-full px-5 mt-6">
           <div className="w-full">
             <TaskCard />
           </div>
